@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Info</title>
+</head>
+<body>
+<h2>Employee Info</h2>
+<br>
+<form action="/saveUser" method="post" th:object="${user}">
+    <input type="hidden" th:field="*{id}">
+
+    Name: <input type="text" th:field="*{name}">
+    <br><br>
+
+    Surname: <input type="text" th:field="*{surname}">
+    <br><br>
+
+    Department: <input type="text" th:field="*{department}">
+    <br><br>
+
+    Salary: <input type="number" th:field="*{salary}" step="0.01">
+    <br><br>
+
+    <input type="submit" value="OK">
+</form>
+</body>
+</html>
