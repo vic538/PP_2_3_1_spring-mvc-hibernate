@@ -25,8 +25,15 @@
             <td th:text="${user.department}">...</td>
             <td th:text="${user.salary}">...</td>
             <td>
-                <a th:href="@{/updateUser(id=${user.id})}" class="button">Update</a>
-                <a th:href="@{/deleteUser(id=${user.id})}" class="button">Delete</a>
+                <form th:action="@{/updateUser(id=${user.id})}" method="post" style="display: inline">
+                    <button type="submit" class="button">Update</button>
+                </form>
+
+                <form th:action="@{/deleteUser(id=${user.id})}" method="post" style="display: inline">
+                    <button type="submit" class="button">Delete</button>
+                </form>
+
+
             </td>
         </tr>
     </table>

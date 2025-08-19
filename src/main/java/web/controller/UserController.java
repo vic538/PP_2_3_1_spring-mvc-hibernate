@@ -38,13 +38,13 @@ public class UserController {
         return "redirect:/users";
     }
 
-    @GetMapping(value = "/updateUser")
+    @PostMapping(value = "/updateUser")
     public String updateUser(@RequestParam int id, Model model) {
         model.addAttribute("user", userService.getUser(id));
         return "user-info";
     }
 
-    @GetMapping(value = "/deleteUser")
+    @PostMapping(value = "/deleteUser")
     public String deleteUser(@RequestParam int id) {
         userService.deleteUser(id);
         return "redirect:/users";
