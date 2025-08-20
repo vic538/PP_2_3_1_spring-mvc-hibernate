@@ -14,8 +14,8 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Autowired
-    public UserServiceImpl(UserDao userDAO) {
-        this.userDao = userDAO;
+    public UserServiceImpl(UserDao userDao) {
+        this.userDao = userDao;
     }
 
     @Override
@@ -40,3 +40,4 @@ public class UserServiceImpl implements UserService {
         userDao.deleteUser(id);
     }
 }
+
